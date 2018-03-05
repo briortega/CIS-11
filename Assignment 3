@@ -22,4 +22,20 @@
 2. Byte ?
 3. Sbyte ?
 4. Qword ?
-5. Sdword
+5. SDword
+
+- 3.5.5 Section Review
+3. ListSize = ($ - myArray)
+
+- 3.9.1 Section Review
+4. 
+5. Little endian goes from low to high while big endian goes from high to low while storing and retrieving data from memory.
+6.
+25. SDword
+
+- 3.9.2 Section Review
+4.
+7.
+13.
+
+- 3.10
