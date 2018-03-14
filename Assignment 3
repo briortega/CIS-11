@@ -28,7 +28,7 @@
 3. ArraySize = ($ - myArray)
 
 - 3.9.1 Section Review
-4. 
+4. Assembler is more of a tool than a language and assembly is the language used for code.
 5. Little endian goes from low to high while big endian goes from high to low while storing and retrieving data from memory.
 6.
 25. SDword
