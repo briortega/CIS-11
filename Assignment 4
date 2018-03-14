@@ -1,21 +1,55 @@
-- 4.2.8 Section Review, Questions 1, 2, 3, 4, 5, 6
-1. inc val1
-2. sub val3
-3.
-4.
-5.
+- [ ] 4.2.8 Section Review Questions
+1. Inc va12
+2. Sub eax,va13
+3. 
+  Mov ax,va14
+  Sub va12,ax
+4.CF= 0 SF= 1
+5.OF=1 SF= 1
 6.
+A) CF=1 SF=0 ZF=1 Of= 0
+B) CF=0 SF=1 ZF=0 Of= 1
+C) CF=0 SF=1 ZF=0  Of= 0
 
-- 4.3.8 Section Review, Questions 1,2,3,4,5
-1.
-2.
-3.
-4.
-5.
+- [ ] 4.3.8 Section Review Questions
+1. F
+2. F
+3. T
+4. F
+5. T
 
-- 4.4.5 Section Review, Questions 4,5
-4.
-5.
+- [ ] 4.4.5 Section Review Questions
+4. T
+5. 
+A. AL= 10h
+B. AL= 40h
+C. AX= 3Bh
+D. EDX= 3
+E. EDX= 3
+F. EAX= 2
 
-- 4.10 Programming Exercises, Question 7
+- [ ] 4.10 Programming Exercises
 7.
+; Reverse String
+
+ExitProcess proto
+
+.data
+source BYTE "This is the source string",0
+target BYTE SIZEOF source DUP('#')
+
+.code
+main proc
+mov esi, SIZEOF source
+mov ecx, SIZEOF source
+mov edx, 0
+ MyLoop:
+	mov al,[source + esi - 1]
+	mov [target + edx],al
+	inc edx
+	dec esi
+ loop MyLoop
+
+   call ExitProcess
+main endp
+end
