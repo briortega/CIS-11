@@ -18,14 +18,14 @@
 4. Operating system loader
 
 - 3.4.13 Section Review
-1. Sword ?
-2. Byte ?
-3. Sbyte ?
-4. Qword ?
+1. myvar1 Sword ?
+2. myvar2 Byte ?
+3. myvar3 Sbyte ?
+4. myvar4 Qword ?
 5. SDword
 
 - 3.5.5 Section Review
-3. ListSize = ($ - myArray)
+3. ArraySize = ($ - myArray)
 
 - 3.9.1 Section Review
 4. 
