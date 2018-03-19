@@ -7,9 +7,9 @@
 4.CF= 0 SF= 1
 5.OF=1 SF= 1
 6.
-A) CF=1 SF=0 ZF=1 Of= 0
-B) CF=0 SF=1 ZF=0 Of= 1
-C) CF=0 SF=1 ZF=0  Of= 0
+A. CF=1 SF=0 ZF=1 Of= 0
+B. CF=0 SF=1 ZF=0 Of= 1
+C. CF=0 SF=1 ZF=0  Of= 0
 
 - [ ] 4.3.8 Section Review Questions
 1. F
