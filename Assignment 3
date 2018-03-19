@@ -30,12 +30,13 @@
 - 3.9.1 Section Review
 4. Assembler is more of a tool than a language and assembly is the language used for code.
 5. Little endian goes from low to high while big endian goes from high to low while storing and retrieving data from memory.
-6.
+6. When using a symbolic constant it is easier to read and maintain throughout the program especially when having to change 
+the value it can be done in one place.
 25. SDword
 
 - 3.9.2 Section Review
-4.
-7.
-13.
+4. 
+7. var1 Dword 120 DUP(?)
+13. testString Byte 500 DUP(“TEST”)
 
 - 3.10
