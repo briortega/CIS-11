@@ -1,4 +1,4 @@
-- [ ] 4.2.8 Section Review Questions
+- 4.2.8 Section Review
 1. Inc va12
 2. Sub eax,va13
 3. 
@@ -11,14 +11,14 @@ A. CF=1 SF=0 ZF=1 Of= 0
 B. CF=0 SF=1 ZF=0 Of= 1
 C. CF=0 SF=1 ZF=0  Of= 0
 
-- [ ] 4.3.8 Section Review Questions
+- 4.3.8 Section Review
 1. False
 2. False
 3. True
 4. False
 5. True
 
-- [ ] 4.4.5 Section Review Questions
+- 4.4.5 Section Review
 4. True
 5. 
 A. AL= 10h
@@ -28,7 +28,7 @@ D. EDX= 3
 E. EDX= 3
 F. EAX= 2
 
-- [ ] 4.10 Programming Exercises
+- 4.10 Programming Exercises
 7.
 ; Reverse String
 
