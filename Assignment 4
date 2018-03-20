@@ -12,14 +12,14 @@ B. CF=0 SF=1 ZF=0 Of= 1
 C. CF=0 SF=1 ZF=0  Of= 0
 
 - [ ] 4.3.8 Section Review Questions
-1. F
-2. F
-3. T
-4. F
-5. T
+1. False
+2. False
+3. True
+4. False
+5. True
 
 - [ ] 4.4.5 Section Review Questions
-4. T
+4. True
 5. 
 A. AL= 10h
 B. AL= 40h
