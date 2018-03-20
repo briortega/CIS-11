@@ -1,4 +1,4 @@
-- 1.1.3 Section Review, Questions 1,3, 8, 12
+- 1.1.3 Section Review
 1. An assembler converts source code while a linker combines individual files.
 3. A single statement turns into multiple instructions.
 8. Neither because in assembly there is no such restriction and in c++ a pointer of one type can't be assigned to another pointer type.
@@ -9,13 +9,13 @@
   add,eax,3
   mov X,eax
   
-- 1.2.1 Section Review, Questions 2, 3, 10
+- 1.2.1 Section Review
 2. A translated program can be executed more quickly than interpreted ones because they are already translate and runed with that code
 instead of doing both at the same time while they are being interpreted.
 3. True
 10. Instruction set architecture level 2
 
-- 1.3.9 Section Review, Questions 2, 3, 5, 6, 7 
+- 1.3.9 Section Review
 2.
 a. 248
 b. 202
@@ -49,11 +49,14 @@ b. 110010110
 c. 100100001
 4. 00000110
 5.
-a. 16
-b. 32
-c. 64
-d.
+a. 16 bits
+b. 32 bits
+c. 64 bits
+d. 128 bits
 6.
+a. 
+b. 
+c. 
 7.
 a.
 b.
