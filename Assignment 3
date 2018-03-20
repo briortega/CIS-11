@@ -35,8 +35,22 @@ the value it can be done in one place.
 25. SDword
 
 - 3.9.2 Section Review
-4. 
+4. Dword is a define 32-bit variable but it doesn’t say if you can assign it a negative value.
 7. var1 Dword 120 DUP(?)
 13. testString Byte 500 DUP(“TEST”)
 
 - 3.10
+
+ExitProcess proto
+.data
+sum DWORD 0
+.code
+main proc
+	mov eax,0
+	add eax,ebx
+	add ecx,edx
+	sub eax,ecx
+	mov sum,eax
+   call ExitProcess
+main endp
+end
