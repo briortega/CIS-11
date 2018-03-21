@@ -46,7 +46,10 @@ ExitProcess proto
 sum DWORD 0
 .code
 main proc
-	mov eax,0
+	mov eax,6
+	mov ebx,1
+	mov ecx,2
+	mov edx,3
 	add eax,ebx
 	add ecx,edx
 	sub eax,ecx
