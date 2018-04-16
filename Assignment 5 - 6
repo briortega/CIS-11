@@ -1,0 +1,46 @@
+- 5.9 Programming Exercises
+7.
+10.
+;Fibonacci Generator
+
+ExitProcess proto
+WriteInt64 proto
+Crlf proto
+
+.data
+nMinus2 QWORD 0
+nMinus1 QWORD 1
+n		QWORD ?
+
+.code
+main proc
+   mov rcx,47
+  
+   mov rax,nMinus2
+   call WriteInt64
+   call Crlf
+
+   mov rax,nMinus1
+   call WriteInt64
+   call Crlf
+
+   STARTLOOP:
+
+   mov r9, nMinus2
+   add r9, nMinus1
+   mov n,r9
+
+   mov rax,n
+   call WriteInt64
+   call Crlf
+   
+   mov r9,nMinus1
+   mov nMinus2, r9
+   mov r9,n
+   mov nMinus1, r9
+   Loop STARTLOOP
+
+   mov  ecx,0
+   call ExitProcess
+main endp
+end
