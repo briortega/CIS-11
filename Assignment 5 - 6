@@ -1,5 +1,37 @@
 - 5.9 Programming Exercises
 7.
+;Random Screen Locations
+
+ExitProcess proto
+WriteInt64  proto
+ReadInt64   proto
+Random64    proto
+Crlf        proto
+.data
+	;randNumber QWORD 0
+.code
+main proc
+	;xor rdx,rdx
+	call Random64
+	mov rcx, 100
+	;div rcx
+	;mov rcx, rdx
+
+STARTLOOP:
+	mov rax, rcx
+	call Random64
+	call WriteInt64
+	;call ReadInt64
+	;call WriteInt64
+	call crlf
+	inc rax
+	mov rdx,rax
+Loop STARTLOOP
+
+   call ExitProcess
+main endp
+end
+
 10.
 ;Fibonacci Generator
 
