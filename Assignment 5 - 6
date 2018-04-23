@@ -1,7 +1,5 @@
 - 5.9 Programming Exercises
 7.
-;Random Screen Locations
-
 ExitProcess proto
 WriteInt64  proto
 ReadInt64   proto
