@@ -1,0 +1,53 @@
+ExitProcess proto
+WriteInt64	proto
+Crlf		proto
+
+.data
+myArray QWORD 5,1,4,2,8
+.code
+main proc
+	
+	mov rcx, LENGTHOF myArray
+	mov rsi, 0
+
+	STARTPRINTLOOP:
+		mov rax, myArray[rsi * 8]
+		call WriteInt64
+		inc rsi
+	LOOP STARTPRINTLOOP
+	call crlf
+
+	mov rcx, LENGTHOF myArray
+	OUTERLOOP:
+		mov r15, rcx ;save outerloop counter
+		mov rcx, LENGTHOF myArray
+		dec rcx
+		mov rsi, 0
+		SORTLOOP:
+			mov r9, myArray[rsi * 8]
+			mov r11, rsi
+			inc r11
+			mov r10, myArray[r11 * 8]
+			cmp r9, r10
+			jle ENDLOOP
+
+			SWAP:
+				mov r13, r9
+				mov myArray[rsi * 8], r10
+				mov myArray[r11 * 8], r13
+			ENDLOOP:
+			inc rsi
+		LOOP SORTLOOP
+		mov rcx, r15
+	LOOP OUTERLOOP
+
+	mov rcx, LENGTHOF myArray
+	mov rsi, 0
+	ENDPRINTLOOP:
+		mov rax, myArray[rsi * 8]
+		call WriteInt64
+		inc rsi
+	LOOP ENDPRINTLOOP
+	call ExitProcess
+main endp
+end
