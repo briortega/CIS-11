@@ -1,1 +1,163 @@
  6.11.2 Programming Exercises, Questions 5 & 6 (submit these as one source code file)
+ExitProcess proto
+WriteString proto
+WriteInt64	proto
+ReadString  proto
+ReadInt64	proto
+Crlf        proto
+str_compare proto
+
+.data
+CaseTable BYTE 'A'
+    QWORD Process_A
+EntrySize = ($ - CaseTable)
+    BYTE 'B'
+    QWORD Process_B
+    BYTE 'C'
+    QWORD Process_C
+    BYTE 'D'
+    QWORD Process_D
+    BYTE 'E'
+    QWORD Process_E
+
+numberOfEntries = ($ - caseTable) / EntrySize
+
+prompt BYTE "Press 1,2,3,4 or 5 ",0
+msgA BYTE "1) X and Y",0
+msgB BYTE "2) X or Y",0
+msgC BYTE "3) Not X",0
+msgD BYTE "4) X XOR Y",0
+msgE BYTE "5) Exit",0
+msgX BYTE "Enter X value: ",0
+msgY BYTE "Enter Y value: ",0
+result BYTE "Result: ",0
+
+value1 BYTE 0
+value2 BYTE 0
+results BYTE 2
+optionAnswer BYTE 0
+
+.code
+main proc
+   mov rdx, OFFSET msgA
+   call WriteString
+   call Crlf
+
+   mov rdx, OFFSET msgB
+   call WriteString
+   call Crlf
+
+   mov rdx, OFFSET msgC
+   call WriteString
+   call Crlf
+
+   mov rdx, OFFSET msgD
+   call WriteString
+   call Crlf
+  
+   mov rdx, OFFSET msgE
+   call WriteString
+   call Crlf
+
+   mov rdx, OFFSET msgX
+   call WriteString
+   call Crlf
+   call ReadInt64
+   mov value1, al
+
+   mov rdx, OFFSET msgY
+   call WriteString
+   call Crlf
+   call ReadInt64
+   mov value2, al
+
+   mov rdx, OFFSET prompt
+   call WriteString
+   call Crlf
+   call ReadInt64
+   mov optionAnswer, al
+  
+   mov rdx, OFFSET result
+   call WriteString
+
+   L1:
+        cmp cl, 1
+        je L2
+
+		cmp cl, 2
+		je L3
+		
+		cmp cl, 3
+		je L4
+		
+		cmp cl, 4
+		je L4
+		
+		cmp cl, 5
+		je L5
+		
+		cmp cl, 6
+		je L6
+    L2:
+        call Process_A
+		jmp L6
+    L3: 
+        call Process_B
+		jmp L6
+	L4:
+		call Process_C
+		jmp L6
+	L5:
+		call Process_D
+		jmp L6
+	L6:
+		call Process_E
+   
+    call ExitProcess
+main endp
+
+    Process_A PROC
+        mov bl, value1
+        AND bl, value2
+        mov results, bl
+        mov al, results
+        call WriteInt64
+        call Crlf
+		ret
+    Process_A ENDP
+
+    Process_B PROC
+        mov bl, value1
+        OR bl, value2
+        mov results, bl
+        mov al, results
+        call WriteInt64
+		call Crlf
+        ret
+    Process_B ENDP
+
+    Process_C PROC
+        mov bl, value1
+        NOT bl
+        mov results, bl
+        mov al, results
+        call WriteInt64
+        call Crlf
+		ret
+    Process_C ENDP
+
+    Process_D PROC
+        mov bl, value1
+        XOR bl, value2
+        mov results, bl
+        mov al, results
+        call WriteInt64
+		call Crlf
+        ret
+    Process_D ENDP
+
+    Process_E PROC
+    ret
+    Process_E ENDP
+
+end
